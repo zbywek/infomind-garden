@@ -1,0 +1,38 @@
+@import "../settings/variables";
+
+//nav {
+//  ul {
+//    display: flex;
+//    list-style: none;
+//    gap: $small-gap;
+//    color: white; /* Biały tekst */
+//    text-align: center;
+//    padding: 14px 16px;
+//    text-decoration: none;
+//    .spacer{
+//      flex-grow: 1;
+//    }
+//  }
+//}
+.navbar {
+  display: flex;
+  justify-content: start;
+  background-color: #0455BF; /* Intensywny niebieski */
+  overflow: hidden;
+  a {
+    display: block;
+    color: white; /* Biały tekst */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+}
+
+.navbar a:hover {
+  background-color: #ddd; /* Jasny szary dla hover */
+  color: black;
+}
+.navbar-right {
+  margin-left: auto;
+  color: red;
+}

@@ -1,0 +1,40 @@
+<div *ngIf="initialLoading" class="spinner-container">
+  <mat-spinner></mat-spinner>
+</div><table>
+  <thead>
+  <tr>
+    <th>Urządzenie</th>
+    <th>Nazwa</th>
+    <th>Opis</th>
+    <th>Status</th>
+    <th>Wł/Wył</th>
+    <th>Akcje</th>
+  <tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let device of devices">
+    <td><img [src]="getIconPath(device.iconId)" class="icon"></td>
+    <td>{{ device.deviceName }}</td>
+    <td>{{ device.deviceDescription }}</td>
+    <td>{{ device.deviceState }}</td>
+    <td>
+      <mat-slide-toggle [checked]="device.deviceStatus === 'ON'" (change)="toggleDeviceStatus(device, $event)">
+        {{ device.deviceStatus === 'ON' ? 'Włączone' : 'Wyłączone' }}
+      </mat-slide-toggle>
+    </td>
+    <td>
+      <button mat-flat-button *ngFor="let button of device.availableButtons"
+              (click)="buttonActions(button, device)"
+              class="btn btn-default">
+        {{ buttonLabels[button] }}
+      </button>
+    </td>
+  </tr>
+  </tbody>
+
+
+</table>
+
+
+
+

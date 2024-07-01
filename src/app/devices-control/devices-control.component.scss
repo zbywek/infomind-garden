@@ -1,0 +1,47 @@
+@import "../settings/variables";
+
+.icon {
+  width: $icon-width;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: $margin;
+  font-size: $font-size;
+  font-family: sans-serif;
+  min-width: $table-min-width;
+  box-shadow: 0 0 20px $box-shadow-color;
+
+  thead tr {
+    background-color: #12224D;
+    color: #ffffff;
+    text-align: left;
+  }
+
+  td, th {
+    padding: $padding;
+  }
+
+  tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+
+  tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+
+  td[data-status="active"] {
+    color: $status-active;
+  }
+
+  td[data-status="inactive"] {
+    color: $status-inactive;
+  }
+
+  .btn {
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+}

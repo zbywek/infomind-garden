@@ -1,0 +1,18 @@
+@import "../settings/variables";
+
+.contact {
+  text-align: center;
+  padding: $small-gap;
+  border: 1px solid $accentColor;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  h1 {
+    font-size: 3.5em;
+    color: $accentColor;
+  }
+
+  p{
+    margin: $small-gap 0;
+  }
+}
