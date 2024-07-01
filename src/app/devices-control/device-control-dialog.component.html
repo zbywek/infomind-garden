@@ -1,0 +1,29 @@
+<div class="dialog-box-container wider-dialog">
+  <h2 mat-dialog-title>Modyfikacja </h2>
+  <mat-dialog-content>
+    <p>Dostępne informacje do zmiany</p>
+    <mat-form-field>
+      <mat-label>Nazwa</mat-label>
+      <input matInput [(ngModel)]="data.deviceName">
+    </mat-form-field>
+    <br/>
+    <mat-form-field>
+      <mat-label>Opis urządzenia</mat-label>
+      <input matInput [(ngModel)]="data.deviceDescription">
+    </mat-form-field>
+    <br/>
+    <mat-form-field>
+      <mat-label>Czy urządzenie włączone (A/N) </mat-label>
+      <input matInput [(ngModel)]="data.deviceState">
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Rezygnuję</button>
+    <button mat-button [mat-dialog-close]="{
+        id: data.id,
+        deviceName: data.deviceName,
+        deviceDescription: data.deviceDescription,
+        deviceState: data.deviceState
+    }" cdkFocusInitial>Ok potwierdzam</button>
+  </mat-dialog-actions>
+</div>
