@@ -1,0 +1,27 @@
+.container {
+  padding: 20px;
+  margin-top: 30px;
+  background-color: #f1f1f1;
+  height: 110px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; // This ensures space is distributed between items
+
+    .logo {
+      width: 200px;
+      height: 80px;
+    }
+
+    h2 {
+      margin: 0 20px; // Adds space between the logo and the heading
+    }
+
+    .flowerbed {
+      width: 240px;
+      height: 100px;
+      margin-left: auto; // This pushes the flowerbed image to the right
+    }
+  }
+}

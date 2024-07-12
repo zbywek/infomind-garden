@@ -18,7 +18,7 @@
     <td>{{ device.deviceDescription }}</td>
     <td>{{ device.deviceState }}</td>
     <td>
-      <mat-slide-toggle [checked]="device.deviceStatus === 'ON'" (change)="toggleDeviceStatus(device, $event)">
+      <mat-slide-toggle *ngIf="device.deviceStatus !== 'NON'" [checked]="device.deviceStatus === 'ON'" (change)="toggleDeviceStatus(device, $event)">
         {{ device.deviceStatus === 'ON' ? 'Włączone' : 'Wyłączone' }}
       </mat-slide-toggle>
     </td>
